@@ -10,14 +10,23 @@
 # end
 # end
 
-def oxford_comma(array)
-if one_element_array=["kiwi"]
-array.join(",")
-elsif two_element_array=["kiwi", "durian"]
-two_element_array.join(" and ")
-elsif three_element_array=["kiwi", "durian", "starfruit"]
-three_element_array.join(" , ")
-else
+# def oxford_comma(array)
+# if one_element_array=["kiwi"]
+# array.join(",")
+# elsif two_element_array=["kiwi", "durian"]
+# two_element_array.join(" and ")
+# elsif three_element_array=["kiwi", "durian", "starfruit"]
+# three_element_array.join(" , ")
+# else
   
-end
-end
+# end
+# end
+def oxford_comma(array)
+return array[0] if array.length == 1
+  return array[0..-2].join(', ') + " and " + array[-1] if array.length > 1
+end    
+
+
+
+
+
